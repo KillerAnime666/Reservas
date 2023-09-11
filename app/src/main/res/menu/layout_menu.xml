@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="Agregar"
+        android:id="@+id/mnuAlta"
+        />
+
+    <item
+        android:title="Lista"
+        android:id="@+id/mnuLista"
+        />
+</menu>
