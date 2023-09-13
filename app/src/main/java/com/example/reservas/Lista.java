@@ -6,11 +6,14 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.content.DialogInterface;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -60,7 +63,6 @@ public class Lista extends AppCompatActivity {
     }
 
     public void refrescarListaDeProductos() {
-
         System.out.println("100");
         if (adaptador == null) return;
         System.out.println("200");
@@ -99,10 +101,13 @@ public class Lista extends AppCompatActivity {
         alertaBaja.show();
     }
 
+    @SuppressLint("MissingInflatedId")
     void cambio(final ModeloProducto objProd){
-        View subView = LayoutInflater.from(getApplicationContext()).inflate(R.layout.layout_cambio_producto, null);
+        View subView = LayoutInflater.from(getApplicationContext()).
+                inflate(R.layout.layout_cambio_producto, null);
 
-        final EditText etNombre, etApellido, etCarnet, etTelefono, etDepartamento, etProducto, etMonto, etSaldo;
+        final EditText etNombre, etApellido, etCarnet,
+                etTelefono, etDepartamento, etProducto, etMonto, etSaldo;
 
         etNombre = subView.findViewById(R.id.etNuevoNombre);
         etApellido = subView.findViewById(R.id.etNuevoApellido);

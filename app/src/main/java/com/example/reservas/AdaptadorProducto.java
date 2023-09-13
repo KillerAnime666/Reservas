@@ -1,5 +1,6 @@
 package com.example.reservas;
 
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,6 +32,8 @@ public class AdaptadorProducto extends RecyclerView.Adapter<AdaptadorProducto.Vi
 
     @Override
     public void onBindViewHolder(@NonNull ViewDataHelper holder, int position) {
+        ModeloProducto producto = lista.get(position);
+
         holder.tvIdRes.setText(String.valueOf(lista.get(position).getId()));
         holder.tvNombreRes.setText(lista.get(position).getNombre());
         holder.tvApellidoRes.setText(lista.get(position).getApellido());
@@ -40,6 +43,12 @@ public class AdaptadorProducto extends RecyclerView.Adapter<AdaptadorProducto.Vi
         holder.tvProductoRes.setText(lista.get(position).getProducto());
         holder.tvMontoRes.setText(String.valueOf(lista.get(position).getMonto()));
         holder.tvSaldoRes.setText(String.valueOf(lista.get(position).getSaldo()));
+
+        if (producto.getSaldo() <= 0) {
+            holder.itemView.setBackgroundColor(Color.parseColor("#ADF60000"));
+        } else {
+            holder.itemView.setBackgroundColor(Color.parseColor("#AD058005"));
+        }
     }
 
     @Override

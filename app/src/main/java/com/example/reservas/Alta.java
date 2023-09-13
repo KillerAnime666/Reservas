@@ -65,11 +65,13 @@ public class Alta extends AppCompatActivity {
                     }else{
                         System.out.println("Exito en el Proceso de alta");
 
-                        InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                        InputMethodManager imm = (InputMethodManager)getSystemService(
+                                Context.INPUT_METHOD_SERVICE);
                         imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
 
                         limpiaCampos();
-                        Toast.makeText(getApplicationContext(),"succes, exito en la grabacion "+res, Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(),"succes, exito en la grabacion "
+                                + res, Toast.LENGTH_LONG).show();
                     }
                 }
             }
