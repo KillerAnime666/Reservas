@@ -20,9 +20,11 @@ public class Controlador {
 
         ContentValues valInsert = new ContentValues();
         valInsert.put("nombre", objProd.getNombre());
+        valInsert.put("apellido", objProd.getApellido());
         valInsert.put("carnet", objProd.getCarnet());
         valInsert.put("telefono", objProd.getTelefono());
         valInsert.put("departamento", objProd.getDepartamento());
+        valInsert.put("producto", objProd.getProducto());
         valInsert.put("monto", objProd.getMonto());
         valInsert.put("saldo", objProd.getSaldo());
 
@@ -39,8 +41,8 @@ public class Controlador {
 
         System.out.println("controlador 2");
 
-        String[] columnasConsultadas = {"id", "nombre", "carnet", "telefono",
-        "departamento", "monto", "saldo"};
+        String[] columnasConsultadas = {"id", "nombre", "apellido", "carnet", "telefono",
+        "departamento", "producto", "monto", "saldo"};
 
         System.out.println("controlador 3");
 
@@ -72,13 +74,15 @@ public class Controlador {
         do{
             int cod = cursor.getInt(0);
             String name = cursor.getString(1);
-            String ci = cursor.getString(2);
-            int tel = cursor.getInt(3);
-            String dep = cursor.getString(4);
-            float mont = cursor.getFloat(5);
-            float sal = cursor.getFloat(6);
+            String ape = cursor.getString(2);
+            String ci = cursor.getString(3);
+            int tel = cursor.getInt(4);
+            String dep = cursor.getString(5);
+            String prod = cursor.getString(6);
+            float mont = cursor.getFloat(7);
+            float sal = cursor.getFloat(8);
 
-            ModeloProducto objProd = new ModeloProducto(cod, name, ci, tel, dep, mont, sal);
+            ModeloProducto objProd = new ModeloProducto(cod, name, ape, ci, tel, dep, prod, mont, sal);
             listaProductos.add(objProd);
 
         }while(cursor.moveToNext());
@@ -102,9 +106,11 @@ public class Controlador {
 
         ContentValues valoresParaActualizar = new ContentValues();
         valoresParaActualizar.put("nombre", objProd.getNombre());
+        valoresParaActualizar.put("apellido", objProd.getApellido());
         valoresParaActualizar.put("carnet", objProd.getCarnet());
         valoresParaActualizar.put("telefono", objProd.getTelefono());
         valoresParaActualizar.put("departamento", objProd.getDepartamento());
+        valoresParaActualizar.put("producto", objProd.getProducto());
         valoresParaActualizar.put("monto", objProd.getMonto());
         valoresParaActualizar.put("saldo", objProd.getSaldo());
 

@@ -33,9 +33,11 @@ public class AdaptadorProducto extends RecyclerView.Adapter<AdaptadorProducto.Vi
     public void onBindViewHolder(@NonNull ViewDataHelper holder, int position) {
         holder.tvIdRes.setText(String.valueOf(lista.get(position).getId()));
         holder.tvNombreRes.setText(lista.get(position).getNombre());
+        holder.tvApellidoRes.setText(lista.get(position).getApellido());
         holder.tvCarnetRes.setText(lista.get(position).getCarnet());
         holder.tvTelefonoRes.setText(String.valueOf(lista.get(position).getTelefono()));
         holder.tvDepartamentoRes.setText(lista.get(position).getDepartamento());
+        holder.tvProductoRes.setText(lista.get(position).getProducto());
         holder.tvMontoRes.setText(String.valueOf(lista.get(position).getMonto()));
         holder.tvSaldoRes.setText(String.valueOf(lista.get(position).getSaldo()));
     }
@@ -47,15 +49,18 @@ public class AdaptadorProducto extends RecyclerView.Adapter<AdaptadorProducto.Vi
 
     public class ViewDataHelper extends RecyclerView.ViewHolder{
 
-        TextView tvIdRes, tvNombreRes, tvCarnetRes, tvTelefonoRes, tvDepartamentoRes, tvMontoRes, tvSaldoRes;
+        TextView tvIdRes, tvNombreRes, tvApellidoRes, tvCarnetRes,
+                tvTelefonoRes, tvDepartamentoRes, tvProductoRes, tvMontoRes, tvSaldoRes;
 
         public ViewDataHelper(@NonNull View itemView) {
             super(itemView);
             tvIdRes = itemView.findViewById(R.id.tvIdItem);
             tvNombreRes = itemView.findViewById(R.id.tvNombreItem);
+            tvApellidoRes = itemView.findViewById(R.id.tvApellidoItem);
             tvCarnetRes = itemView.findViewById(R.id.tvCarnetItem);
             tvTelefonoRes = itemView.findViewById(R.id.tvTelefonoItem);
             tvDepartamentoRes = itemView.findViewById(R.id.tvDepartamentoItem);
+            tvProductoRes = itemView.findViewById(R.id.tvProductoItem);
             tvMontoRes = itemView.findViewById(R.id.tvMontoItem);
             tvSaldoRes = itemView.findViewById(R.id.tvSaldoItem);
         }

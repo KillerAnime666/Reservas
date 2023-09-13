@@ -102,19 +102,23 @@ public class Lista extends AppCompatActivity {
     void cambio(final ModeloProducto objProd){
         View subView = LayoutInflater.from(getApplicationContext()).inflate(R.layout.layout_cambio_producto, null);
 
-        final EditText etNombre, etCarnet, etTelefono, etDepartamento, etMonto, etSaldo;
+        final EditText etNombre, etApellido, etCarnet, etTelefono, etDepartamento, etProducto, etMonto, etSaldo;
 
         etNombre = subView.findViewById(R.id.etNuevoNombre);
+        etApellido = subView.findViewById(R.id.etNuevoApellido);
         etCarnet = subView.findViewById(R.id.etNuevoCarnet);
         etTelefono = subView.findViewById(R.id.etNuevoTelefono);
         etDepartamento = subView.findViewById(R.id.etNuevoDepartamento);
+        etProducto = subView.findViewById(R.id.etNuevoProducto);
         etMonto = subView.findViewById(R.id.etNuevoMonto);
         etSaldo = subView.findViewById(R.id.etNuevoSaldo);
 
         etNombre.setText(objProd.getNombre());
+        etApellido.setText(objProd.getApellido());
         etCarnet.setText(objProd.getCarnet());
         etTelefono.setText(String.valueOf(objProd.getTelefono()));
         etDepartamento.setText(objProd.getDepartamento());
+        etProducto.setText(objProd.getProducto());
         etMonto.setText(String.valueOf(objProd.getMonto()));
         etSaldo.setText(String.valueOf(objProd.getSaldo()));
 
@@ -127,9 +131,11 @@ public class Lista extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 objProd.setNombre(etNombre.getText().toString());
+                objProd.setApellido(etApellido.getText().toString());
                 objProd.setCarnet(etCarnet.getText().toString());
                 objProd.setTelefono(Integer.parseInt(etTelefono.getText().toString()));
                 objProd.setDepartamento(etDepartamento.getText().toString());
+                objProd.setProducto(etDepartamento.getText().toString());
                 objProd.setMonto(Float.parseFloat(etMonto.getText().toString()));
                 objProd.setSaldo(Float.parseFloat(etSaldo.getText().toString()));
 

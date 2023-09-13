@@ -28,6 +28,16 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="Ingresa Apellido"
+            android:textColorHint="#2ef8a0"
+            android:textColor="#2ef8a0"
+            android:textSize="30dp"
+            android:id="@+id/etApellido"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:hint="Ingresa Carnet"
             android:textColorHint="#2ef8a0"
             android:textColor="#2ef8a0"
@@ -36,10 +46,11 @@
             />
         
         <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Ingresa Teléfono"
             android:textColorHint="#2ef8a0"
+
             android:textColor="#2ef8a0"
             android:textSize="30dp"
             android:id="@+id/etTelefono"
@@ -47,7 +58,7 @@
             />
 
         <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Ingresa Departmento"
             android:textColorHint="#2ef8a0"
@@ -57,7 +68,17 @@
             />
 
         <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingrese Producto"
+            android:textColorHint="#2ef8a0"
+            android:textColor="#2ef8a0"
+            android:textSize="30dp"
+            android:id="@+id/etProducto"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Ingresa Monto Depositado"
             android:textColorHint="#2ef8a0"
@@ -68,7 +89,7 @@
             />
 
         <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Ingresa Saldo Faltante"
             android:textColorHint="#2ef8a0"

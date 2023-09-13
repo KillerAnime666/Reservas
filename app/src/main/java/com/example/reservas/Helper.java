@@ -20,8 +20,8 @@ public class Helper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL(
                 "CREATE TABLE reserva(id integer primary key autoincrement, " +
-                        "nombre text, carnet text, telefono integer," +
-                        "departamento text, monto float, saldo float)"
+                        "nombre text, apellido text, carnet text, telefono integer," +
+                        "departamento text, producto text, monto float, saldo float)"
         );
 
     }

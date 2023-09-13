@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 public class Alta extends AppCompatActivity {
 
-    EditText etnombre, etcarnet, ettelefono,etdepartamento, etmonto, etsaldo;
+    EditText etnombre, etapellido, etcarnet, ettelefono, etdepartamento, etproducto, etmonto, etsaldo;
 
     Button btguardar, btsalir;
 
@@ -24,9 +24,11 @@ public class Alta extends AppCompatActivity {
         setContentView(R.layout.activity_alta);
 
         etnombre = findViewById(R.id.etNombre);
+        etapellido = findViewById(R.id.etApellido);
         etcarnet = findViewById(R.id.etCarnet);
         ettelefono = findViewById(R.id.etTelefono);
         etdepartamento = findViewById(R.id.etDepartamento);
+        etproducto = findViewById(R.id.etProducto);
         etmonto = findViewById(R.id.etMonto);
         etsaldo = findViewById(R.id.etSaldo);
 
@@ -39,10 +41,12 @@ public class Alta extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String nombre = etnombre.getText().toString().trim();
+                String apellido = etapellido.getText().toString().trim();
                 String carnet = etcarnet.getText().toString().trim();
                 String telefono = ettelefono.getText().toString().trim();
                 String departamento = etdepartamento.getText().toString().trim();
-                String monto = etmonto.getText().toString().toString();
+                String producto = etproducto.getText().toString().trim();
+                String monto = etmonto.getText().toString().toString().trim();
                 String saldo = etsaldo.getText().toString().trim();
 
                 if (nombre.isEmpty() || carnet.isEmpty() || telefono.isEmpty()
@@ -50,9 +54,9 @@ public class Alta extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),
                             "error, campos vacios", Toast.LENGTH_LONG).show();
                 }else{
-                    long res = controlador.altaProducto(new ModeloProducto(nombre, carnet,
-                            Integer.parseInt(telefono), departamento, Float.parseFloat(monto),
-                            Float.parseFloat(saldo)));
+                    long res = controlador.altaProducto(new ModeloProducto(nombre, apellido, carnet,
+                            Integer.parseInt(telefono), departamento, producto
+                            , Float.parseFloat(monto), Float.parseFloat(saldo)));
                     System.out.println("Proceso de alta");
                     if (res <= 0){
                         System.out.println("Fracaso en el proceso de alta");
@@ -82,9 +86,11 @@ public class Alta extends AppCompatActivity {
 
     void limpiaCampos(){
         etnombre.setText(null);
+        etapellido.setText(null);
         etcarnet.setText(null);
         ettelefono.setText(null);
         etdepartamento.setText(null);
+        etproducto.setText(null);
         etmonto.setText(null);
         etsaldo.setText(null);
 

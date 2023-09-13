@@ -3,11 +3,11 @@ package com.example.reservas;
 public class ModeloProducto {
 
     private int id, telefono;
-    private String nombre, carnet, departamento;
+    private String nombre, apellido, carnet, departamento, producto;
     private float monto, saldo;
 
-    public ModeloProducto(int id, String nombre, String carnet, int telefono,
-                          String departamento, float monto, float saldo) {
+    public ModeloProducto(int id, String nombre, String apellido, String carnet, int telefono,
+                          String departamento, String producto, float monto, float saldo) {
         this.id = id;
         this.telefono = telefono;
         this.nombre = nombre;
@@ -15,16 +15,20 @@ public class ModeloProducto {
         this.departamento = departamento;
         this.monto = monto;
         this.saldo = saldo;
+        this.apellido = apellido;
+        this.producto = producto;
     }
 
-    public ModeloProducto(String nombre, String carnet, int telefono,
-                          String departamento, float monto, float saldo) {
+    public ModeloProducto(String nombre, String apellido, String carnet, int telefono,
+                          String departamento, String producto, float monto, float saldo) {
         this.telefono = telefono;
         this.nombre = nombre;
         this.carnet = carnet;
         this.departamento = departamento;
         this.monto = monto;
         this.saldo = saldo;
+        this.apellido = apellido;
+        this.producto = producto;
     }
 
     public int getId() {
@@ -55,6 +59,14 @@ public class ModeloProducto {
         return saldo;
     }
 
+    public String getApellido() {
+        return apellido;
+    }
+
+    public String getProducto() {
+        return producto;
+    }
+
     public void setId(int id) {
         this.id = id;
     }
@@ -83,14 +95,24 @@ public class ModeloProducto {
         this.saldo = saldo;
     }
 
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public void setProducto(String producto) {
+        this.producto = producto;
+    }
+
     @Override
     public String toString() {
         return "ModeloProducto{" +
                 "id=" + id +
                 ", telefono=" + telefono +
                 ", nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
                 ", carnet='" + carnet + '\'' +
                 ", departamento='" + departamento + '\'' +
+                ", producto='" + producto + '\'' +
                 ", monto=" + monto +
                 ", saldo=" + saldo +
                 '}';

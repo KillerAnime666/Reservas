@@ -3,13 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
+    android:background="#3B111111"
     >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:weightSum="9"
+        android:weightSum="7"
         android:padding="10dp"
         >
 
@@ -18,7 +19,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/tvIdItem"
             android:textSize="20dp"
-            android:text="1  "
+            android:text="1   "
             />
 
         <TextView
@@ -33,27 +34,18 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/tvApellidoItem"
+            android:textSize="20dp"
+            android:text="Con Pan XD"
+            android:layout_weight="2"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/tvCarnetItem"
             android:textSize="20dp"
-            android:text="86867456 LP"
-            android:layout_weight="2"
-            />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/tvTelefonoItem"
-            android:textSize="20dp"
-            android:text="60501690"
-            android:layout_weight="2"
-            />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/tvDepartamentoItem"
-            android:textSize="20dp"
-            android:text="La Paz"
+            android:text="86867456"
             android:layout_weight="2"
             />
 
@@ -63,7 +55,54 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingLeft="30dp"
+        android:paddingLeft="50dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvTelefonoItem"
+            android:textSize="20dp"
+            android:text="60501690"
+            android:layout_weight="1"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvDepartamentoItem"
+            android:textSize="20dp"
+            android:text="La Paz"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:paddingBottom="10dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/tvProductoItem"
+            android:text="Cajita"
+            android:textSize="20dp"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="45dp"
         >
 
         <TextView
@@ -102,5 +141,10 @@
             />
 
     </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        />
 
 </LinearLayout>
